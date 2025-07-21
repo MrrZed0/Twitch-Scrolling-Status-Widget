@@ -6,7 +6,7 @@ This project creates a beautiful scrolling list of Twitch streamers showing:
 - Their usernames
 - A clickable link to each Twitch profile
 - Smooth horizontal scrolling that pauses on hover
-- Live updates every 5 minutes using the Twitch API
+- Live updates every 10 minutes using the Twitch API
 
 > Perfect for embedding on streamer hubs, community websites, or event pages.
 
@@ -25,6 +25,11 @@ This project creates a beautiful scrolling list of Twitch streamers showing:
 
 ## 🗂️ Project Structure
 
+/twitch-scroller
+├── index.html # Frontend display
+├── twitch_data.php # Backend script that fetches Twitch info
+├── twitch_cache.json # Auto-generated cache file (do not edit)
+├── README.md # You're reading this
 
 ---
 
