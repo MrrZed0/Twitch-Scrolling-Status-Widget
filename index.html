@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<?php if (isset($_SERVER['HTTPS_CF_CONNECTING_IP'])) $_SERVER['REMOTE_ADDR'] = $_SERVER['HTTP_CF_CONNECTING_IP']; ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Logo Scroller</title>
+    <style>
+        body, html {
+            margin: 0;
+            overflow: hidden;
+            background: transparent;
+        }
+        .wrapper {
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            margin-top: 20px;
+            background: transparent;
+        }
+        .scroller {
+            display: flex;
+            animation: scroll 25s linear infinite;
+        }
+        .scroller a {
+            margin: 0 20px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .scroller img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: transform 0.5s;
+        }
+        .scroller img:hover {
+            transform: scale(1.5);
+        }
+        .scroller span {
+            color: black;
+            margin-top: 5px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .status-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            border: 2px solid white;
+        }
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="scroller" id="twitchScroller"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const scroller = document.querySelector('.scroller');
+        scroller.addEventListener('mouseenter', () => scroller.style.animationPlayState = 'paused');
+        scroller.addEventListener('mouseleave', () => scroller.style.animationPlayState = 'running');
+
+        fetch('twitch_data.php')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('twitchScroller');
+                Object.values(data).forEach(user => {
+                    const { name, profile_image_url, url, online } = user;
+
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.target = '_blank';
+
+                    const img = document.createElement('img');
+                    img.src = profile_image_url;
+                    img.alt = name;
+
+                    const dot = document.createElement('div');
+                    dot.classList.add('status-dot');
+                    dot.style.backgroundColor = online ? 'green' : 'red';
+
+                    const wrapper = document.createElement('div');
+                    wrapper.style.position = 'relative';
+                    wrapper.appendChild(img);
+                    wrapper.appendChild(dot);
+
+                    const span = document.createElement('span');
+                    span.textContent = name;
+
+                    a.appendChild(wrapper);
+                    a.appendChild(span);
+                    container.appendChild(a);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading Twitch data:', error);
+            });
+    });
+</script>
+
+</body>
+</html>
