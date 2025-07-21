@@ -25,7 +25,7 @@ This project creates a beautiful scrolling list of Twitch streamers showing:
 
 ## 🗂️ Project Structure
 
-- /twitch-scroller
+- /Twitch-Scrolling-Status-Widget
 - ├── index.html # Frontend display
 - ├── twitch_data.php # Backend script that fetches Twitch info
 - ├── twitch_cache.json # Auto-generated cache file (do not edit)
