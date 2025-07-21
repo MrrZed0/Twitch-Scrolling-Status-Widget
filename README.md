@@ -78,7 +78,7 @@ $usernames = [
 ### 🧠 How It Works:
 - index.html loads the Twitch list dynamically via JavaScript
 - twitch_data.php queries the Twitch API and saves results to twitch_cache.json
-- Status is updated every 5 minutes
+- Status is updated every 10 minutes
 - Hovering stops the scroll animation
 
 
