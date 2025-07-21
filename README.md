@@ -42,7 +42,7 @@ This project creates a beautiful scrolling list of Twitch streamers showing:
 ### 1. Clone this Repo
 
 ```bash
-git clone https://github.com/your-username/twitch-scroller.git
+git clone https://github.com/MrrZed0/Twitch-Scrolling-Status-Widget.git
 cd twitch-scroller
 ```
 
@@ -63,7 +63,7 @@ $client_secret = 'YOUR_CLIENT_SECRET_HERE';
 In the same file, modify the list of usernames:
 ```
 $usernames = [
-    'blazin_irish',
+    'mrrzed0',
     'sour_diesel01',
     'the_lost_in_the_sauce',
     // Add or remove Twitch usernames here
@@ -87,8 +87,8 @@ $usernames = [
 
 
 ### 🙌 Credits
-Created by MrrZed0
-Uses the Twitch Helix API
+- Created by MrrZed0
+- Uses the Twitch Helix API
 
 
 ### 📜 License
