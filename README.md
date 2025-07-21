@@ -43,7 +43,7 @@ This project creates a beautiful scrolling list of Twitch streamers showing:
 
 ```bash
 git clone https://github.com/MrrZed0/Twitch-Scrolling-Status-Widget.git
-cd twitch-scroller
+cd Twitch-Scrolling-Status-Widget
 ```
 
 ## ⚙️ Get Twitch API Credentials:
@@ -93,8 +93,3 @@ $usernames = [
 
 ### 📜 License
 MIT — free to use, share, and modify.
-
----
-```
-Let me know if you’d like a markdown badge version (`Live Demo`, `MIT License`, etc.) or want help publishing it as a GitHub Pages demo site!
-```
