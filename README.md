@@ -18,7 +18,7 @@ This project creates a beautiful scrolling list of Twitch streamers showing:
 - ✅ Hover-to-pause  
 - ✅ Online/offline indicator  
 - ✅ Live profile picture updates  
-- ✅ Caching to reduce API usage (updates every 5 minutes)  
+- ✅ Caching to reduce API usage (updates every 10 minutes)  
 - ✅ Easy to customize list of Twitch usernames  
 
 ---
