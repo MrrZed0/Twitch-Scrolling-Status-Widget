@@ -48,5 +48,14 @@ This project creates a beautiful scrolling list of Twitch streamers showing:
 ### 1. Clone this Repo
 
 ```bash
-git clone https://github.com/your-username/twitch-scroller.git
+git clone https://github.com/MrrZed0/twitch-scroller.git
 cd twitch-scroller
+
+## ⚙️ Get Twitch API Credentials
+- Go to: https://dev.twitch.tv/console/apps
+- Click "Register Your Application"
+- Set a Redirect URL (can be anything like http://localhost)
+- Copy your Client ID and Client Secret
+```bash
+$client_id = 'YOUR_CLIENT_ID_HERE';
+$client_secret = 'YOUR_CLIENT_SECRET_HERE';
