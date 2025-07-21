@@ -25,11 +25,11 @@ This project creates a beautiful scrolling list of Twitch streamers showing:
 
 ## 🗂️ Project Structure
 
-/twitch-scroller
-├── index.html # Frontend display
-├── twitch_data.php # Backend script that fetches Twitch info
-├── twitch_cache.json # Auto-generated cache file (do not edit)
-├── README.md # You're reading this
+- /twitch-scroller
+- ├── index.html # Frontend display
+- ├── twitch_data.php # Backend script that fetches Twitch info
+- ├── twitch_cache.json # Auto-generated cache file (do not edit)
+- ├── README.md # You're reading this
 
 ---
 
