@@ -10,6 +10,8 @@ This project creates a beautiful scrolling list of Twitch streamers showing:
 
 > Perfect for embedding on streamer hubs, community websites, or event pages.
 
+![Demo](https://github.com/MrrZed0/Twitch-Scrolling-Status-Widget/blob/main/image.png?raw=true)
+
 ---
 
 ## 🔧 Features
